@@ -29,7 +29,7 @@ public class App extends Application{
         WorkManager mWorkManager = WorkManager.getInstance();
        // mWorkManager.cancelAllWorkByTag("Abhijeet");
 
-        PeriodicWorkRequest periodicBuilder =new  PeriodicWorkRequest.Builder(MyWork.class, 10, TimeUnit.SECONDS).addTag("Abhijeet").build();
+        PeriodicWorkRequest periodicBuilder =new  PeriodicWorkRequest.Builder(MyWork.class, 15, TimeUnit.MINUTES).addTag("Abhijeet").build();
         mWorkManager.enqueue(periodicBuilder);
 
 
